@@ -24,7 +24,6 @@ export default function OpengraphImage() {
           fontFamily: "monospace",
         }}
       >
-        <div style={{ fontSize: 28, color: "#5E5E59" }}>{profile.location}</div>
         <div style={{ fontSize: 96, fontWeight: 700, letterSpacing: -3 }}>{profile.name}</div>
         <div style={{ fontSize: 36, lineHeight: 1.4, display: "flex", flexWrap: "wrap" }}>
           <span>{tagline.before}</span>

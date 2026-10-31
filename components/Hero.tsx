@@ -12,12 +12,9 @@ export function Hero() {
   return (
     <section id="top" className="col flex flex-wrap items-center gap-10 pt-[104px] pb-[88px]">
       <div className="flex min-w-0 grow-[999] basis-[420px] flex-col gap-6">
-        <p className="rise m-0 text-[13px] tracking-[0.02em] text-muted" style={{ animationDelay: "0ms" }}>
-          {profile.location}
-        </p>
         <h1
           className="rise m-0 text-[52px] leading-[1.1] font-bold tracking-[-0.03em]"
-          style={{ animationDelay: "120ms" }}
+          style={{ animationDelay: "0ms" }}
         >
           {profile.name}
         </h1>
@@ -45,7 +42,11 @@ export function Hero() {
         </div>
       </div>
 
-      <figure className="rise m-0 max-w-[220px] flex-[1_1_180px]" style={{ animationDelay: "300ms" }}>
+      {/* Once the hero wraps (narrow screens) the photo sits above the text; DOM order keeps the h1 first. */}
+      <figure
+        className="rise m-0 max-w-[220px] flex-[1_1_180px] max-[687px]:order-first"
+        style={{ animationDelay: "300ms" }}
+      >
         {hasPhoto ? (
           <div className="relative aspect-square w-full overflow-hidden rounded-full border border-border">
             <Image

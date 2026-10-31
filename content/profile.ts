@@ -1,7 +1,6 @@
 export const profile = {
   name: "Brendan Ling",
   initials: "BL",
-  location: "Manchester, UK · BSc Computer Science · Class of 2027",
   tagline: {
     before: "I study how machine learning systems ",
     accent: "fail under attack",
