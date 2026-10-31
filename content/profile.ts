@@ -18,7 +18,7 @@ export const profile = {
   contactBlurb: "Applying to master’s programmes for 2027 entry, and open to research collaborations.",
   footer: "© 2026 Brendan Ling · Built with Next.js",
   // Update once the production URL / custom domain is known.
-  siteUrl: "https://portfolio-b1-ing.vercel.app",
+  siteUrl: "https://brendanling.vercel.app",
   nav: [
     { label: "Research", href: "#research" },
     { label: "Experience", href: "#experience" },
