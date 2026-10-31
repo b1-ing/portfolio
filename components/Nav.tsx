@@ -11,7 +11,7 @@ export function Nav() {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="border-b border-border">
+    <header className="sticky top-0 z-40 border-b border-border bg-bg">
       <nav aria-label="Main" className="col">
         <div className="flex h-16 items-center justify-between gap-4">
           <a href="#top" className="flex min-h-11 items-center text-xl font-bold">

@@ -37,6 +37,8 @@
 
 html {
   scroll-behavior: smooth;
+  /* Keeps anchored sections clear of the sticky 64px header. */
+  scroll-padding-top: 72px;
 }
 
 body {
