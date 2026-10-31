@@ -7,7 +7,7 @@ export const profile = {
     after: ", and build AI systems that hold up in the real world.",
   },
   summary:
-    "I’m a final-year Computer Science student at the University of Manchester and a DSTA Overseas Scholar. My research looks at backdoor attacks on federated learning defences. Outside it, I build agentic AI systems, from a logistics control tower at DSTA to UoMMods, a course planner used by ~1,000 students, and I lead the Manchester AI Society.",
+    "I’m a final-year Computer Science student at the University of Manchester and a DSTA Overseas Scholar. Leading a team at the Singapore Armed Forces Mapping Unit taught me that trust in a system depends on how faithfully it represents the world and how well it withstands pressure. That shapes three problems I work on: faithful AI simulation, adversarial robustness (my research on backdoor attacks against federated learning defences), and reliable agentic decision-making (from a logistics control tower at DSTA to UoMMods). I also lead the Manchester AI Society.",
   email: "brendanling04@gmail.com",
   github: "https://github.com/b1-ing",
   linkedin: "https://linkedin.com/in/brendan-ling",
