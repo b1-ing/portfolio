@@ -5,7 +5,7 @@ export type Project = {
   role: string;
   stats: StatPart[];
   description: string;
-  screenshot: { src: string; alt: string; placeholder: string };
+  screenshot: { src: string; alt: string; placeholder: string; width: number; height: number };
   /** Links with no URL are hidden. Fill these in once known. */
   liveUrl?: string;
   githubUrl?: string;
@@ -26,6 +26,8 @@ export const projects: Project[] = [
       src: "/images/uommods.webp",
       alt: "Screenshot of the UoMMods course planner",
       placeholder: "[UoMMods screenshot, 1600px wide]",
+      width: 1200,
+      height: 643,
     },
     liveUrl: "https://uommods.vercel.app/",
     githubUrl: undefined,

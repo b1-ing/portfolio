@@ -16,7 +16,11 @@ export function FeaturedProject({ project }: { project: Project }) {
           <span className="size-[9px] rounded-full bg-border" />
         </div>
         {hasShot ? (
-          <div className="relative h-[360px]">
+          // Full screenshot on narrow screens; cropped to the mockup's 360px height from tablet up.
+          <div
+            className="relative aspect-(--ar) min-[768px]:aspect-auto min-[768px]:h-[360px]"
+            style={{ "--ar": `${screenshot.width} / ${screenshot.height}` } as React.CSSProperties}
+          >
             <Image
               src={screenshot.src}
               alt={screenshot.alt}
