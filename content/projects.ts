@@ -23,11 +23,11 @@ export const projects: Project[] = [
     description:
       "Course-planning platform for University of Manchester students: multi-year planning, prerequisite graphs and module search, with an agentic scraping pipeline (Gemma 3 + Ollama) that extracts programme data from university pages. Led to an invitation to the Deputy CIO's strategic workshop on student systems.",
     screenshot: {
-      src: "/images/uommods.png",
+      src: "/images/uommods.webp",
       alt: "Screenshot of the UoMMods course planner",
       placeholder: "[UoMMods screenshot, 1600px wide]",
     },
-    liveUrl: undefined,
+    liveUrl: "https://uommods.vercel.app/",
     githubUrl: undefined,
   },
 ];

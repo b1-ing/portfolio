@@ -44,7 +44,7 @@ Adding an award or project means editing one data file.
 Drop these in and the placeholders disappear automatically:
 
 - `public/images/profile.jpg` — profile photo (square works best)
-- `public/images/uommods.png` — project screenshot, ~1600px wide
+- `public/images/uommods.webp` — project screenshot, ~1600px wide
 - `public/cv.pdf` — CV, linked from the hero and contact section
 
 ## Deploy
