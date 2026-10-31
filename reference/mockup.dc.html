@@ -1,0 +1,293 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Brendan Ling — Portfolio home</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+.light{--bg:#FAFAF7;--surface:#FFFFFF;--text:#1A1A1A;--muted:#5E5E59;--border:#E6E4DE;--accent-soft:#E8EEFC}
+.dark{--bg:#0F1115;--surface:#171A20;--text:#E8E6E1;--muted:#A3A097;--border:#2A2E36;--accent-soft:#1C2540}
+a{color:inherit;text-decoration:none}
+a:hover{text-decoration:underline;text-underline-offset:4px}
+@keyframes rise{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+@keyframes pulse{0%,100%{transform:scale(1);opacity:1}50%{transform:scale(1.6);opacity:.45}}
+.rise{animation:rise .8s cubic-bezier(.2,.7,.2,1) both}
+.pulse{animation:pulse 2s ease-in-out infinite}
+@media (prefers-reduced-motion: reduce){.rise,.pulse{animation:none !important}}
+</style>
+</helmet>
+<div class="{{theme}}" style="background: var(--bg); color: var(--text); font-family: 'Space Mono', ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 15px; line-height: 1.7; min-height: 100vh">
+
+<header style="border-bottom: 1px solid var(--border); padding: 0 24px">
+<nav aria-label="Main" style="max-width: 720px; margin: 0 auto; height: 64px; display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap">
+<a href="#top" style="font-size: 20px; font-weight: 700">BL</a>
+<div style="display: flex; align-items: center; gap: 28px; flex-wrap: wrap; font-size: 13px; letter-spacing: 0.02em">
+<a href="#research">Research</a>
+<a href="#experience">Experience</a>
+<a href="#projects">Projects</a>
+<a href="#leadership">Leadership</a>
+<a href="#awards">Awards</a>
+<a href="#contact">Contact</a>
+<button aria-label="Toggle dark mode" style="width: 44px; height: 44px; border: 1px solid var(--border); background: transparent; color: var(--text); border-radius: 22px; display: flex; align-items: center; justify-content: center; cursor: pointer">
+<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"></path></svg>
+</button>
+</div>
+</nav>
+</header>
+
+<section id="top" style="max-width: 720px; margin: 0 auto; padding: 104px 24px 88px; display: flex; flex-wrap: wrap; align-items: center; gap: 40px">
+<div style="flex: 999 1 420px; min-width: 0; display: flex; flex-direction: column; gap: 24px">
+<p class="rise" style="margin: 0; font-size: 13px; letter-spacing: 0.02em; color: var(--muted); animation-delay: 0ms">Manchester, UK · BSc Computer Science · Class of 2027</p>
+<h1 class="rise" style="margin: 0; font-weight: 700; font-size: 52px; line-height: 1.1; letter-spacing: -0.03em; animation-delay: 120ms">Brendan Ling</h1>
+<p class="rise" style="margin: 0; font-size: 18px; line-height: 1.6; max-width: 56ch; animation-delay: 240ms">I study how machine learning systems <span style="color: {{accent}}">fail under attack</span>, and build AI systems that hold up in the real world.</p>
+<p class="rise" style="margin: 0; color: var(--muted); animation-delay: 360ms">I’m a final-year Computer Science student at the University of Manchester and a DSTA Overseas Scholar. My research looks at backdoor attacks on federated learning defences. Outside it, I build agentic AI systems, from a logistics control tower at DSTA to UoMMods, a course planner used by ~1,000 students, and I lead the Manchester AI Society.</p>
+<div class="rise" style="display: flex; gap: 24px; flex-wrap: wrap; font-size: 15px; font-weight: 500; animation-delay: 600ms">
+<a href="mailto:brendanling04@gmail.com" style="color: {{accent}}">Email</a>
+<a href="https://github.com/b1-ing" style="color: {{accent}}">GitHub</a>
+<a href="https://linkedin.com/in/brendan-ling" style="color: {{accent}}">LinkedIn</a>
+<a href="#contact" style="color: {{accent}}">CV (PDF)</a>
+</div>
+</div>
+
+<figure class="rise" style="flex: 1 1 180px; max-width: 220px; margin: 0; animation-delay: 300ms">
+<div role="img" aria-label="Profile photo placeholder" style="aspect-ratio: 1 / 1; width: 100%; border-radius: 50%; border: 1px dashed var(--muted); background: var(--surface); display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 12px; color: var(--muted)">
+<svg width="56" height="56" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="4"></circle><path d="M4 21c0-4.4 3.6-8 8-8s8 3.6 8 8"></path></svg>
+<span style="font-size: 12px; letter-spacing: 0.02em">[Profile photo]</span>
+</div>
+</figure>
+</section>
+
+<main style="max-width: 720px; margin: 0 auto; padding: 0 24px">
+
+<section id="research" style="padding: 48px 0; border-top: 1px solid var(--border); display: flex; flex-direction: column; gap: 40px">
+<div style="display: flex; align-items: baseline; gap: 16px">
+<span style="font-size: 13px; color: var(--muted)">01</span>
+<h2 style="margin: 0; font-weight: 700; font-size: 26px; letter-spacing: -0.02em">Research</h2>
+</div>
+
+<article style="display: flex; flex-direction: column; gap: 12px">
+<div style="display: flex; justify-content: space-between; align-items: baseline; gap: 12px; flex-wrap: wrap">
+<h3 style="margin: 0; font-size: 18px; font-weight: 700">Backdoor Attacks on Federated Learning Defences</h3>
+<span style="font-size: 12px; padding: 2px 10px; border-radius: 12px; background: var(--accent-soft); color: var(--text)">ONGOING</span>
+</div>
+<p style="margin: 0; font-size: 13px; color: var(--muted)">University of Manchester · Dr. Zhipeng Wang, Dr. Mustafa Mustafa · Sep 2026 – present</p>
+<p style="margin: 4px 0 0; font-size: 17px; line-height: 1.6; font-style: italic">FilterFL's detector mostly measures a client's class skew, so it flags honest clients more reliably than successful attackers.</p>
+<ul style="margin: 0; padding-left: 20px; display: flex; flex-direction: column; gap: 6px; color: var(--text)">
+<li>Full-image checkerboard trigger evades FilterFL (CCS 2025) and FLTrust (NDSS 2021) while preserving clean accuracy.</li>
+<li>One accepted malicious update entrenches the backdoor, which persists under benign training.</li>
+<li>Independent reimplementation and controlled ablations on the CSF3 HPC cluster.</li>
+</ul>
+<div style="display: flex; gap: 8px; flex-wrap: wrap; font-size: 12px">
+<span style="padding: 2px 10px; border-radius: 12px; background: var(--accent-soft)">Federated Learning</span>
+<span style="padding: 2px 10px; border-radius: 12px; background: var(--accent-soft)">Adversarial ML</span>
+<span style="padding: 2px 10px; border-radius: 12px; background: var(--accent-soft)">PyTorch</span>
+<span style="padding: 2px 10px; border-radius: 12px; background: var(--accent-soft)">HPC</span>
+</div>
+</article>
+
+<article style="display: flex; flex-direction: column; gap: 12px">
+<div style="display: flex; justify-content: space-between; align-items: baseline; gap: 12px; flex-wrap: wrap">
+<h3 style="margin: 0; font-size: 18px; font-weight: 700">LLM-Agent Simulation of Misinformation Spread</h3>
+<span style="font-size: 12px; padding: 2px 10px; border-radius: 12px; background: var(--accent-soft)">2025</span>
+</div>
+<p style="margin: 0; font-size: 13px; color: var(--muted)">DSTA, Singapore · AI Research Intern · Jun – Aug 2025</p>
+<p style="margin: 4px 0 0; font-size: 17px; line-height: 1.6; font-style: italic">82% accuracy hid a fidelity gap: LLM agents amplified emotionally charged posts that real users ignored.</p>
+<ul style="margin: 0; padding-left: 20px; display: flex; flex-direction: column; gap: 6px">
+<li>Simulated hundreds of Reddit users on the open-source OASIS framework.</li>
+<li>Designed agent personas and a mock recommendation algorithm; tracked per-post engagement to study virality.</li>
+</ul>
+<div style="display: flex; gap: 8px; flex-wrap: wrap; font-size: 12px">
+<span style="padding: 2px 10px; border-radius: 12px; background: var(--accent-soft)">LLM Agents</span>
+<span style="padding: 2px 10px; border-radius: 12px; background: var(--accent-soft)">Social Simulation</span>
+<span style="padding: 2px 10px; border-radius: 12px; background: var(--accent-soft)">OASIS</span>
+</div>
+</article>
+</section>
+
+<section id="experience" style="padding: 48px 0; border-top: 1px solid var(--border); display: flex; flex-direction: column; gap: 36px">
+<div style="display: flex; align-items: baseline; gap: 16px">
+<span style="font-size: 13px; color: var(--muted)">02</span>
+<h2 style="margin: 0; font-weight: 700; font-size: 26px; letter-spacing: -0.02em">Experience</h2>
+</div>
+
+<div style="display: flex; flex-direction: column; gap: 6px">
+<p style="margin: 0; font-size: 18px; font-weight: 700">Defence Science and Technology Agency</p>
+<p style="margin: 0; font-size: 13px; color: var(--muted)">Singapore · 3 internships</p>
+</div>
+
+<div style="display: flex; flex-wrap: wrap; gap: 8px 24px">
+<p style="margin: 0; flex: 0 0 140px; font-size: 13px; color: var(--muted); padding-top: 3px">Jun – Aug 2026</p>
+<div style="flex: 999 1 400px; min-width: 0; display: flex; flex-direction: column; gap: 8px">
+<h3 style="margin: 0; font-size: 17px; font-weight: 700">AI Development Intern</h3>
+<p style="margin: 0">Proof-of-concept multi-agent logistics control tower that turns natural-language operator requests into routing and dispatch actions.</p>
+<p style="margin: 0; font-size: 13px"><span style="color: {{accent}}">3</span> agents · <span style="color: {{accent}}">17</span> tools · <span style="color: {{accent}}">90%</span> tool-call correctness</p>
+<p style="margin: 0; font-size: 14px; color: var(--muted)">LangGraph · OR-Tools · NetworkX · DeepEval</p>
+</div>
+</div>
+
+<div style="display: flex; flex-wrap: wrap; gap: 8px 24px">
+<p style="margin: 0; flex: 0 0 140px; font-size: 13px; color: var(--muted); padding-top: 3px">Jun – Aug 2025</p>
+<div style="flex: 999 1 400px; min-width: 0; display: flex; flex-direction: column; gap: 8px">
+<h3 style="margin: 0; font-size: 17px; font-weight: 700">AI Research Intern</h3>
+<p style="margin: 0">LLM-agent social media simulation for studying misinformation propagation (see Research).</p>
+</div>
+</div>
+
+<div style="display: flex; flex-wrap: wrap; gap: 8px 24px">
+<p style="margin: 0; flex: 0 0 140px; font-size: 13px; color: var(--muted); padding-top: 3px">Feb – May 2024</p>
+<div style="flex: 999 1 400px; min-width: 0; display: flex; flex-direction: column; gap: 8px">
+<h3 style="margin: 0; font-size: 17px; font-weight: 700">Software Development Intern</h3>
+<p style="margin: 0">Real-time drone rapid mapping: georeferences live video into GeoTIFF orthoimages mid-flight, integrated into the Ground Control Station.</p>
+<p style="margin: 0; font-size: 13px">Capacity <span style="color: {{accent}}">70 → 1,100</span> frames · ~37 min of flight</p>
+<p style="margin: 0; font-size: 14px; color: var(--muted)">GeoServer · React · PostgreSQL/PostGIS</p>
+</div>
+</div>
+
+<div style="display: flex; flex-wrap: wrap; gap: 8px 24px; padding-top: 12px; border-top: 1px solid var(--border)">
+<p style="margin: 0; flex: 0 0 140px; font-size: 13px; color: var(--muted); padding-top: 3px">2022 – 2024</p>
+<div style="flex: 999 1 400px; min-width: 0; display: flex; flex-direction: column; gap: 8px">
+<h3 style="margin: 0; font-size: 17px; font-weight: 700">Senior Geospatial Mapper <span style="font-weight: 400; color: var(--muted)">· National Service</span></h3>
+<p style="margin: 0; font-size: 13px; color: var(--muted)">SAF Mapping Unit, Digital and Intelligence Service</p>
+<p style="margin: 0">Led ~100 personnel at Singapore's national mapping agency; produced and validated geospatial products in QGIS and ArcGIS for military and government clients.</p>
+</div>
+</div>
+</section>
+
+<section id="projects" style="padding: 48px 0; border-top: 1px solid var(--border); display: flex; flex-direction: column; gap: 32px">
+<div style="display: flex; align-items: baseline; gap: 16px">
+<span style="font-size: 13px; color: var(--muted)">03</span>
+<h2 style="margin: 0; font-weight: 700; font-size: 26px; letter-spacing: -0.02em">Projects</h2>
+</div>
+
+<article style="display: flex; flex-direction: column; gap: 16px">
+<div style="border: 1px solid var(--border); border-radius: 10px; overflow: hidden; background: var(--surface)">
+<div style="height: 32px; border-bottom: 1px solid var(--border); display: flex; align-items: center; gap: 6px; padding: 0 12px">
+<span aria-hidden="true" style="width: 9px; height: 9px; border-radius: 5px; background: var(--border)"></span>
+<span aria-hidden="true" style="width: 9px; height: 9px; border-radius: 5px; background: var(--border)"></span>
+<span aria-hidden="true" style="width: 9px; height: 9px; border-radius: 5px; background: var(--border)"></span>
+</div>
+<div style="height: 360px; display: flex; align-items: center; justify-content: center; font-size: 13px; color: var(--muted)">[UoMMods screenshot, 1600px wide]</div>
+</div>
+<div style="display: flex; justify-content: space-between; align-items: baseline; gap: 12px; flex-wrap: wrap">
+<h3 style="margin: 0; font-size: 20px; font-weight: 700">UoMMods <span style="font-weight: 400; color: var(--muted)">· Founder &amp; Developer</span></h3>
+<p style="margin: 0; font-size: 13px"><span style="color: {{accent}}">~1,000</span> users · <span style="color: {{accent}}">5</span> departments · since 2025</p>
+</div>
+<p style="margin: 0">Course-planning platform for University of Manchester students: multi-year planning, prerequisite graphs and module search, with an agentic scraping pipeline (Gemma 3 + Ollama) that extracts programme data from university pages. Led to an invitation to the Deputy CIO's strategic workshop on student systems.</p>
+<div style="display: flex; gap: 24px; font-size: 15px; font-weight: 500">
+<a href="#projects" style="color: {{accent}}">Live site →</a>
+<a href="#projects" style="color: {{accent}}">GitHub →</a>
+</div>
+</article>
+</section>
+
+<section id="leadership" style="padding: 48px 0; border-top: 1px solid var(--border); display: flex; flex-direction: column; gap: 24px">
+<div style="display: flex; align-items: baseline; gap: 16px">
+<span style="font-size: 13px; color: var(--muted)">04</span>
+<h2 style="margin: 0; font-weight: 700; font-size: 26px; letter-spacing: -0.02em">Leadership</h2>
+</div>
+<div style="display: flex; flex-wrap: wrap; gap: 8px 24px">
+<p style="margin: 0; flex: 0 0 140px; font-size: 13px; color: var(--muted); padding-top: 3px">Feb 2026 – now</p>
+<div style="flex: 999 1 400px; min-width: 0; display: flex; flex-direction: column; gap: 10px">
+<h3 style="margin: 0; font-size: 17px; font-weight: 700">President, Manchester AI Society</h3>
+<p style="margin: 0; font-size: 13px"><span style="color: {{accent}}">2,300+</span> members · <span style="color: {{accent}}">+220</span> active · <span style="color: {{accent}}">20+</span> events</p>
+<p style="margin: 0">Workshops, hackathons and outreach with BNY, UiPath and JetBrains. Led the UoM Network Agent pilot with IT Services and set up a student Red Team to test it against malicious prompts.</p>
+</div>
+</div>
+</section>
+
+<section id="education" style="padding: 48px 0; border-top: 1px solid var(--border); display: flex; flex-direction: column; gap: 24px">
+<div style="display: flex; align-items: baseline; gap: 16px">
+<span style="font-size: 13px; color: var(--muted)">05</span>
+<h2 style="margin: 0; font-weight: 700; font-size: 26px; letter-spacing: -0.02em">Education</h2>
+</div>
+<div style="display: flex; flex-wrap: wrap; gap: 8px 24px">
+<p style="margin: 0; flex: 0 0 140px; font-size: 13px; color: var(--muted); padding-top: 3px">2024 – 2027</p>
+<div style="flex: 999 1 400px; min-width: 0; display: flex; flex-direction: column; gap: 8px">
+<h3 style="margin: 0; font-size: 17px; font-weight: 700">University of Manchester</h3>
+<p style="margin: 0">BSc Computer Science with Honours · First Class expected</p>
+<p style="margin: 0; font-size: 13px">Ranked <span style="color: {{accent}}">1st</span> of ~250 in Year 2 · average <span style="color: {{accent}}">89.6%</span></p>
+<p style="margin: 0; font-size: 14px; color: var(--muted)">Machine Learning 98% · Intro to AI 90% · Distributed Systems 90% · Algorithms &amp; Data Structures 87%</p>
+</div>
+</div>
+</section>
+
+<section id="scholarships" style="padding: 48px 0; border-top: 1px solid var(--border); display: flex; flex-direction: column; gap: 24px">
+<div style="display: flex; align-items: baseline; gap: 16px">
+<span style="font-size: 13px; color: var(--muted)">06</span>
+<h2 style="margin: 0; font-weight: 700; font-size: 26px; letter-spacing: -0.02em">Scholarships</h2>
+</div>
+<div style="display: flex; flex-wrap: wrap; gap: 8px 24px">
+<p style="margin: 0; flex: 0 0 140px; font-size: 13px; color: var(--muted); padding-top: 3px">2024</p>
+<div style="flex: 999 1 400px; min-width: 0; display: flex; flex-direction: column; gap: 8px">
+<h3 style="margin: 0; font-size: 17px; font-weight: 700">DSTA Overseas Scholarship</h3>
+<p style="margin: 0">Full-ride scholarship from Singapore’s Defence Science and Technology Agency, covering undergraduate and postgraduate STEM study.</p>
+</div>
+</div>
+</section>
+
+<section id="awards" style="padding: 48px 0; border-top: 1px solid var(--border); display: flex; flex-direction: column; gap: 24px">
+<div style="display: flex; align-items: baseline; gap: 16px">
+<span style="font-size: 13px; color: var(--muted)">07</span>
+<h2 style="margin: 0; font-weight: 700; font-size: 26px; letter-spacing: -0.02em">Awards</h2>
+</div>
+<div style="display: flex; flex-direction: column">
+<div style="display: flex; flex-wrap: wrap; gap: 4px 24px; padding: 14px 0; border-top: 1px solid var(--border)"><span style="flex: 0 0 140px; font-size: 13px; color: var(--muted); padding-top: 2px">2026</span><div style="flex: 999 1 400px; min-width: 0"><p style="margin: 0; font-weight: 700">Best Overall Performance — 1st Prize</p><p style="margin: 0; font-size: 14px; color: var(--muted)">University of Manchester · highest overall result in Year 2 of ~250</p></div></div>
+<div style="display: flex; flex-wrap: wrap; gap: 4px 24px; padding: 14px 0; border-top: 1px solid var(--border)"><span style="flex: 0 0 140px; font-size: 13px; color: var(--muted); padding-top: 2px">2025</span><div style="flex: 999 1 400px; min-width: 0"><p style="margin: 0; font-weight: 700">Netcraft Prize</p><p style="margin: 0; font-size: 14px; color: var(--muted)">University of Manchester · top 10 in Year 1, placed 5th</p></div></div>
+<div style="display: flex; flex-wrap: wrap; gap: 4px 24px; padding: 14px 0; border-top: 1px solid var(--border)"><span style="flex: 0 0 140px; font-size: 13px; color: var(--muted); padding-top: 2px">Oct 2024</span><div style="flex: 999 1 400px; min-width: 0"><p style="margin: 0; font-weight: 700">Singapore AI CTF — Top 40 / 300 teams</p><p style="margin: 0; font-size: 14px; color: var(--muted)">Singapore’s first competitive AI security challenge</p></div></div>
+<div style="display: flex; flex-wrap: wrap; gap: 4px 24px; padding: 14px 0; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border)"><span style="flex: 0 0 140px; font-size: 13px; color: var(--muted); padding-top: 2px">Jun 2024</span><div style="flex: 999 1 400px; min-width: 0"><p style="margin: 0; font-weight: 700">BrainHack TIL — AI Advanced Track Champion</p><p style="margin: 0; font-size: 14px; color: var(--muted)">1,000+ participants · speech recognition, NLP and computer vision</p></div></div>
+</div>
+</section>
+
+<section id="skills" style="padding: 48px 0; border-top: 1px solid var(--border); display: flex; flex-direction: column; gap: 24px">
+<div style="display: flex; align-items: baseline; gap: 16px">
+<span style="font-size: 13px; color: var(--muted)">08</span>
+<h2 style="margin: 0; font-weight: 700; font-size: 26px; letter-spacing: -0.02em">Skills</h2>
+</div>
+<div style="display: flex; flex-wrap: wrap; gap: 8px 24px">
+<p style="margin: 0; flex: 0 0 140px; font-size: 13px; color: var(--muted)">Languages</p>
+<p style="margin: 0; flex: 999 1 400px; min-width: 0">Python, C, C++, Java, Haskell, TypeScript, JavaScript, Verilog, Assembly</p>
+</div>
+<div style="display: flex; flex-wrap: wrap; gap: 8px 24px">
+<p style="margin: 0; flex: 0 0 140px; font-size: 13px; color: var(--muted)">AI / ML</p>
+<p style="margin: 0; flex: 999 1 400px; min-width: 0">PyTorch, scikit-learn, LangGraph, LangSmith, DeepEval, OR-Tools, OpenAI API</p>
+</div>
+<div style="display: flex; flex-wrap: wrap; gap: 8px 24px">
+<p style="margin: 0; flex: 0 0 140px; font-size: 13px; color: var(--muted)">Infra &amp; data</p>
+<p style="margin: 0; flex: 999 1 400px; min-width: 0">React, Next.js, PostgreSQL/PostGIS, GeoServer, NetworkX, Docker, GCP, Vercel, QGIS, ArcGIS</p>
+</div>
+</section>
+
+<section id="contact" style="padding: 80px 0 48px; border-top: 1px solid var(--border); display: flex; flex-direction: column; gap: 20px">
+<p style="margin: 0; color: var(--muted)">Applying to master’s programmes for 2027 entry, and open to research collaborations.</p>
+<a href="mailto:brendanling04@gmail.com" style="font-size: 30px; line-height: 1.3; font-weight: 700; color: {{accent}}; overflow-wrap: anywhere">brendanling04@gmail.com</a>
+<div style="display: flex; gap: 24px; flex-wrap: wrap; font-size: 15px; font-weight: 500">
+<a href="https://github.com/b1-ing">GitHub</a>
+<a href="https://linkedin.com/in/brendan-ling">LinkedIn</a>
+<a href="#contact">Download CV</a>
+</div>
+</section>
+</main>
+
+<footer style="border-top: 1px solid var(--border); padding: 24px">
+<p style="max-width: 720px; margin: 0 auto; font-size: 12px; color: var(--muted)">© 2026 Brendan Ling · Built with Next.js</p>
+</footer>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"accent":{"editor":"color","default":"#1F4FD8","options":["#1F4FD8","#0F766E","#B4441C","#6D28D9"]},"dark":{"editor":"boolean","default":false},"$preview":{"width":1440,"height":5400}}'>
+class Component extends DCLogic {
+renderVals() {
+const dark = this.props.dark ?? false;
+const accent = this.props.accent ?? (dark ? '#7FA2FF' : '#1F4FD8');
+return { theme: dark ? 'dark' : 'light', accent: accent };
+}
+}
+</script>
+</body>
+</html>
