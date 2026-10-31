@@ -1,0 +1,119 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+:root {
+  --bg: #fafaf7;
+  --surface: #ffffff;
+  --text: #1a1a1a;
+  --muted: #5e5e59;
+  --border: #e6e4de;
+  --accent: #1f4fd8;
+  --accent-soft: #e8eefc;
+  color-scheme: light;
+}
+
+.dark {
+  --bg: #0f1115;
+  --surface: #171a20;
+  --text: #e8e6e1;
+  --muted: #a3a097;
+  --border: #2a2e36;
+  --accent: #7fa2ff;
+  --accent-soft: #1c2540;
+  color-scheme: dark;
+}
+
+@theme inline {
+  --color-bg: var(--bg);
+  --color-surface: var(--surface);
+  --color-text: var(--text);
+  --color-muted: var(--muted);
+  --color-border: var(--border);
+  --color-accent: var(--accent);
+  --color-accent-soft: var(--accent-soft);
+  --font-mono: var(--font-space-mono), ui-monospace, SFMono-Regular, Menlo, monospace;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-mono);
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+@layer base {
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  a:hover {
+    text-decoration: underline;
+    text-underline-offset: 4px;
+  }
+}
+
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+/* One 720px column (plus 24px gutters) shared by nav, hero, sections and footer. */
+.col {
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 768px;
+  margin-inline: auto;
+  padding-inline: 24px;
+}
+
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.rise {
+  animation: rise 0.8s cubic-bezier(0.2, 0.7, 0.2, 1) both;
+}
+
+/* The `js` class is set by the inline head script, so content stays visible without JS. */
+.js .reveal:not(.in) {
+  opacity: 0;
+  transform: translateY(8px);
+}
+
+.reveal {
+  transition:
+    opacity 200ms ease-out,
+    transform 200ms ease-out;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .rise {
+    animation: none !important;
+  }
+  .js .reveal:not(.in) {
+    opacity: 1;
+    transform: none;
+  }
+  .reveal {
+    transition: none;
+  }
+}
