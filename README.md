@@ -1,6 +1,6 @@
 # Brendan Ling — portfolio
 
-Personal portfolio site: a single-page, fully static site with research, experience, projects, leadership, education, awards and skills. Light and dark themes, one 720px column, Space Mono throughout.
+Personal portfolio site: a single-page, fully static site with research, experience, projects, leadership, education, awards and skills. Light and dark themes, one centred column, Space Mono throughout.
 
 ## Stack
 
@@ -44,7 +44,7 @@ Adding an award or project means editing one data file.
 Drop these in and the placeholders disappear automatically:
 
 - `public/images/profile.jpg` — profile photo (square works best)
-- `public/images/uommods.webp` — project screenshot, ~1600px wide
+- `public/images/uommods.*` and `public/images/pokerbot.*` — project media; PNG, JPG, WebP, GIF, MP4 or WebM (set the `aspect` in `content/projects.ts` to match)
 - `public/cv.pdf` — CV, linked from the hero and contact section
 
 ## Deploy

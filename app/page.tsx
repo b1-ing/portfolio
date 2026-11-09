@@ -86,9 +86,9 @@ export default function Home() {
           ))}
         </Section>
 
-        <Section id="projects" number="03" title="Projects" className="gap-8 py-12">
-          {projects.map((p) => (
-            <FeaturedProject key={p.name} project={p} />
+        <Section id="projects" number="03" title="Projects" className="gap-10 py-12">
+          {projects.map((p, i) => (
+            <FeaturedProject key={p.name} project={p} className={i > 0 ? "border-t border-border pt-10" : ""} />
           ))}
         </Section>
 
