@@ -26,6 +26,9 @@ export function Hero() {
         <p className="rise m-0 text-muted" style={{ animationDelay: "360ms" }}>
           {profile.summary}
         </p>
+        <p className="rise m-0 text-muted" style={{ animationDelay: "480ms" }}>
+          {profile.offWork}
+        </p>
         <div className="rise flex flex-wrap gap-x-6 text-[15px] font-medium" style={{ animationDelay: "600ms" }}>
           <a href={`mailto:${profile.email}`} className={linkClass}>
             Email

@@ -8,6 +8,7 @@ export const profile = {
   },
   summary:
     "I’m a final-year Computer Science student at the University of Manchester and a DSTA Overseas Scholar. Leading a team at the Singapore Armed Forces Mapping Unit taught me that trust in a system depends on how faithfully it represents the world and how well it withstands pressure. That shapes three problems I work on: faithful AI simulation, adversarial robustness (my research on backdoor attacks against federated learning defences), and reliable agentic decision-making (from a logistics control tower at DSTA to UoMMods). I also lead the Manchester AI Society.",
+  offWork: "My neighbour’s cat Pudding thinks I’m a good playmate. The rest of the time: pool, K-dramas, and hidden-gem food.",
   email: "brendanling04@gmail.com",
   github: "https://github.com/b1-ing",
   linkedin: "https://linkedin.com/in/brendan-ling",
