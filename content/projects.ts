@@ -57,7 +57,7 @@ export const projects: Project[] = [
       base: "/images/pokerbot",
       alt: "Poker-Bot Competition Platform",
       placeholder: "[Poker-bot image, GIF or MP4]",
-      aspect: "16 / 9",
+      aspect: "1280 / 762",
     },
     liveUrl: "https://poker-arena-site.vercel.app/#/",
     githubUrl: undefined,
