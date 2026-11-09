@@ -68,11 +68,11 @@ body {
   border-radius: 2px;
 }
 
-/* One 720px column (plus 24px gutters) shared by nav, hero, sections and footer. */
+/* One 960px column (plus 24px gutters) shared by nav, hero, sections and footer. */
 .col {
   box-sizing: border-box;
   width: 100%;
-  max-width: 768px;
+  max-width: 1008px;
   margin-inline: auto;
   padding-inline: 24px;
 }
