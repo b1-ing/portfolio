@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { Lock } from "lucide-react";
 import type { Project } from "@/content/projects";
 import { findPublicMedia } from "@/lib/assets";
 import { AutoVideo } from "./AutoVideo";
@@ -9,13 +10,30 @@ const external = { target: "_blank", rel: "noopener noreferrer" } as const;
 export function FeaturedProject({ project, className = "" }: { project: Project; className?: string }) {
   const { media } = project;
   const found = findPublicMedia(media.base);
+  // Shown in the fake address bar the way a browser would: no scheme, no trailing slash.
+  const address = project.liveUrl?.replace(/^https?:\/\//, "").replace(/\/$/, "");
 
   const frame = (
     <div className="overflow-hidden rounded-[10px] border border-border bg-surface">
-      <div className="flex h-8 items-center gap-1.5 border-b border-border px-3" aria-hidden="true">
-        <span className="size-[9px] rounded-full bg-border" />
-        <span className="size-[9px] rounded-full bg-border" />
-        <span className="size-[9px] rounded-full bg-border" />
+      <div
+        className="grid h-10 grid-cols-[auto_1fr] items-center gap-3 border-b border-border bg-bg px-3.5 min-[560px]:grid-cols-[auto_1fr_auto]"
+        aria-hidden="true"
+      >
+        <div className="flex items-center gap-2">
+          <span className="size-[11px] rounded-full bg-[#ff5f57]" />
+          <span className="size-[11px] rounded-full bg-[#febc2e]" />
+          <span className="size-[11px] rounded-full bg-[#28c840]" />
+        </div>
+        {address ? (
+          <div className="mx-auto flex h-6 w-full max-w-[420px] min-w-0 items-center gap-1.5 rounded-md border border-border bg-surface px-2.5 text-xs text-muted">
+            <Lock size={11} strokeWidth={2} className="shrink-0" />
+            <span className="truncate">{address}</span>
+          </div>
+        ) : (
+          <span />
+        )}
+        {/* Balances the dots so the address bar sits centred. */}
+        <span className="w-[49px] max-[559px]:hidden" />
       </div>
       <div className="relative w-full" style={{ aspectRatio: media.aspect }}>
         {found?.kind === "video" && (
